@@ -72,7 +72,8 @@ public class Ventas {
     
     public String toString(){        
         String datos="SISTEMA DE VENTAS MISEITVO";        
-        datos+="\nNombre del cliente: "+Clientes.nombre+"\n CANTIDAD ***** COSTO ***** SUBTOTAL\n"+
+        datos+="\nNombre del cliente: "+Clientes.nombre+
+                "\n CANTIDAD ***** COSTO ***** SUBTOTAL\n"+
                 concatenarImportes+
                 "\n Total Venta: "+formatoMoneda(total)+
                 "\n Efectivo: "+dinero+
