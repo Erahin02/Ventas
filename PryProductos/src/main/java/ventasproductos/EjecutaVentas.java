@@ -21,6 +21,8 @@ public class EjecutaVentas {
         String nombre;
         int opc;
         int opcCliente;
+        double efectivo;
+        double cambio;
         
         do{
             
@@ -43,6 +45,8 @@ public class EjecutaVentas {
         while(opc==0);
         
          JOptionPane.showMessageDialog(null,"El total de tu compra es:"+objVenta.getTotal());
+         efectivo=Double.parseDouble(JOptionPane.showInputDialog("Introduce la denominación de tu pago:"));
+         cambio=objVenta.determinarCambio(efectivo);
         
         JOptionPane.showMessageDialog(null,objVenta.toString());
         opcCliente=JOptionPane.showConfirmDialog(null,"¿Deseas Vender a otro cliente?");

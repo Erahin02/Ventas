@@ -15,6 +15,8 @@ public class Ventas {
     private double total;
     
     String concatenarImportes="";
+    double cambio=0;
+    double dinero=0;
     
     public Ventas(){
         cantidad=0;
@@ -72,10 +74,18 @@ public class Ventas {
         String datos="SISTEMA DE VENTAS MISEITVO";        
         datos+="\nNombre del cliente: "+Clientes.nombre+"\n CANTIDAD ***** COSTO ***** SUBTOTAL\n"+
                 concatenarImportes+
-                "\n Total Venta: "+formatoMoneda(total);
+                "\n Total Venta: "+formatoMoneda(total)+
+                "\n Efectivo: "+dinero+
+                "\n Cambio: "+cambio;
         return datos;
     }
     
+    
+    public double determinarCambio(double dinero){
+        this.dinero=dinero;
+        cambio=dinero-total;
+        return cambio;
+    }
     
     
     public String formatoMoneda(double valor){
