@@ -49,6 +49,7 @@ public class EjecutaVentas {
          cambio=objVenta.determinarCambio(efectivo);
         
          // se agragó un comentario
+         //otro 
         JOptionPane.showMessageDialog(null,objVenta.toString());
         opcCliente=JOptionPane.showConfirmDialog(null,"¿Deseas Vender a otro cliente?");
         //aqui preguntar
