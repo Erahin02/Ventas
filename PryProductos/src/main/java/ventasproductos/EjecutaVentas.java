@@ -48,6 +48,7 @@ public class EjecutaVentas {
          efectivo=Double.parseDouble(JOptionPane.showInputDialog("Introduce la denominación de tu pago:"));
          cambio=objVenta.determinarCambio(efectivo);
         
+         // se agragó un comentario
         JOptionPane.showMessageDialog(null,objVenta.toString());
         opcCliente=JOptionPane.showConfirmDialog(null,"¿Deseas Vender a otro cliente?");
         //aqui preguntar
