@@ -77,7 +77,7 @@ public class Ventas {
                 concatenarImportes+
                 "\n Total Venta: "+formatoMoneda(total)+
                 "\n Efectivo: "+dinero+
-                "\n Cambio: "+cambio;
+                "\n Cambio: "+cambio+"**";
         return datos;
     }
     
