@@ -42,9 +42,7 @@ public class EjecutaVentas {
         }
         while(opc==0);
         
-        
-        
-        
+         JOptionPane.showMessageDialog(null,"El total de tu compra es:"+objVenta.getTotal());
         
         JOptionPane.showMessageDialog(null,objVenta.toString());
         opcCliente=JOptionPane.showConfirmDialog(null,"¿Deseas Vender a otro cliente?");
