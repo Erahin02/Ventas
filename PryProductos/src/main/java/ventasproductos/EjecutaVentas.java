@@ -23,7 +23,10 @@ public class EjecutaVentas {
         int opcCliente;
         double efectivo;
         double cambio;
-        
+         String corteCaja;
+         
+        CorteCaja objCaja=new CorteCaja();
+         
         do{
             
             Ventas objVenta=new Ventas();
@@ -45,18 +48,20 @@ public class EjecutaVentas {
         while(opc==0);
         
          JOptionPane.showMessageDialog(null,"El total de tu compra es:"+objVenta.getTotal());
-         efectivo=Double.parseDouble(JOptionPane.showInputDialog("Introduce la denominación de tu pago:"));
-         cambio=objVenta.determinarCambio(efectivo);
-        
-       
+         efectivo=Double.parseDouble(JOptionPane.showInputDialog("Introduce la denominación de tu Billete:"));
+         cambio=objVenta.determinarCambio(efectivo);      
         JOptionPane.showMessageDialog(null,objVenta.toString());
-        opcCliente=JOptionPane.showConfirmDialog(null,"¿Deseas Vender a otro cliente?");
-        //aqui preguntar
+        
+        
+        objCaja.setImporteVenta(objVenta.getTotal());
+        objCaja.calcularIngreso();
+        objCaja.ConcatenarVentasTotales();
+        
+        opcCliente=JOptionPane.showConfirmDialog(null,"¿Deseas Vender a otro cliente?");     
         }
         while(opcCliente==0);
         
-       JOptionPane.showMessageDialog(null,"Buelva pronto");
-       JOptionPane.showMessageDialog(null,"Buelva pronto");
+        JOptionPane.showMessageDialog(null,objCaja.corteCaja());
     }
     
     

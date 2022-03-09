@@ -4,6 +4,7 @@
  */
 package ventasproductos;
 import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
 /**
  *
  * @author era
@@ -17,6 +18,8 @@ public class Ventas {
     String concatenarImportes="";
     double cambio=0;
     double dinero=0;
+    int contador=0;
+    String ventasTotales="";
     
     public Ventas(){
         cantidad=0;
@@ -77,7 +80,7 @@ public class Ventas {
                 concatenarImportes+
                 "\n Total Venta: "+formatoMoneda(total)+
                 "\n Efectivo: "+dinero+
-                "\n Cambio: "+cambio+"**";
+                "\n Cambio: "+cambio;
         return datos;
     }
     
@@ -87,6 +90,8 @@ public class Ventas {
         cambio=dinero-total;
         return cambio;
     }
+    
+   
     
     
     public String formatoMoneda(double valor){
