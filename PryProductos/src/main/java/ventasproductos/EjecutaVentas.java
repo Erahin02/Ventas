@@ -56,6 +56,7 @@ public class EjecutaVentas {
         while(opcCliente==0);
         
        JOptionPane.showMessageDialog(null,"Buelva pronto");
+       JOptionPane.showMessageDialog(null,"Buelva pronto");
     }
     
     
