@@ -22,7 +22,13 @@ public class Clase1 {
     11. mostrar toda la informacion de la venta;*/
     
     
-   // cambio=efectivo-total
+   /** cambio=efectivo-total
+    * 
+    */
+    
+    /**
+     * 
+     */
     public void ejemplo(){
         System.out.println("HOla");
     }

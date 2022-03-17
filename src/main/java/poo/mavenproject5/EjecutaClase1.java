@@ -8,27 +8,55 @@ public class EjecutaClase1{
      do{
          
         try{
-     int numero=Integer.parseInt(JOptionPane.showInputDialog("numero1"));
+     int numero=Integer.parseInt(JOptionPane.showInputDialog("numero1"));     
+     Validaciones.validarNumeros(numero);
      
-     int numero2=0;
-     Validaciones.validarNumeros(numero, numero2);
+     
+     do{
+         try{
+         int numero2=Integer.parseInt(JOptionPane.showInputDialog("numero2"));
+        Validaciones.validarNumeros(numero2);
+        bandera=false;
+         }
+         catch(Validaciones e){
+         JOptionPane.showMessageDialog(null,"Dato incorrecto en numero 2"+e.getMessage()+ " "+e.getClass());
+     }
+         catch(Exception e){
+         JOptionPane.showMessageDialog(null,"Dato incorrecto en numero 2"+e.getMessage()+ " "+e.getClass());
+     }
+         //bandera=true;
+     }
+     while(bandera);
+     
+     bandera=true;
      
      String usuario=JOptionPane.showInputDialog("msg");
      Validaciones.validarTexto(usuario);
      Validaciones.validarTexto2(usuario);
      
+     /*
      Clase1 objc1;
      objc1=null;
      objc1.ejemplo();
+     */
      
-         bandera=false;
+     char sexo='x';
+     sexo=JOptionPane.showInputDialog("introduce tu sexo").charAt(0);
+     //Validaciones.validarSexo(sexo);
+     Validaciones.validarCampoCaracater(sexo);
+     
+     
+     
      }
     
         catch(Validaciones e){
          JOptionPane.showMessageDialog(null,e.getMessage()+ " "+e.getClass());
      }
+        catch(NumberFormatException e){
+         JOptionPane.showMessageDialog(null,"EL campo está vacío o no es un valor "+e.getMessage()+ " "+e.getClass());
+     }
      catch(Exception e){
-         JOptionPane.showMessageDialog(null,"Dato incorrecto"+e.getMessage()+ " "+e.getClass());
+         JOptionPane.showMessageDialog(null,"Debes introducir un valor"+e.getMessage()+ " "+e.getClass());
      }
         /*
      catch(NumberFormatException e){
@@ -39,7 +67,7 @@ public class EjecutaClase1{
      }*/
         
      }
-     while(bandera==true);
+     while(bandera);
      }
     
     /*
